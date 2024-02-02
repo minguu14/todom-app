@@ -1,0 +1,18 @@
+:root{
+    --mangu_top: #FFBF00;
+    --mangu_pants: #31B404;
+    --mangu_side: #2c810f;
+}
+
+body{
+    background-color: #ffe3a8 ;
+}
+
+.container{
+    border: 3px solid var(--mangu_side);
+    border-radius: 5px;
+    background-color: var(--mangu_pants);
+    max-width: 800px;
+    margin: 0px auto;
+}
+

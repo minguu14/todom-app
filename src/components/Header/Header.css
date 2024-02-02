@@ -1,0 +1,14 @@
+.header_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--mangu_top);
+    font-size: 25px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
