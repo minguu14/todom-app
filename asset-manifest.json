@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/todom-app/static/css/main.b1fa3726.css",
+    "main.js": "/todom-app/static/js/main.450fd64a.js",
+    "static/js/787.8e580187.chunk.js": "/todom-app/static/js/787.8e580187.chunk.js",
+    "index.html": "/todom-app/index.html",
+    "main.b1fa3726.css.map": "/todom-app/static/css/main.b1fa3726.css.map",
+    "main.450fd64a.js.map": "/todom-app/static/js/main.450fd64a.js.map",
+    "787.8e580187.chunk.js.map": "/todom-app/static/js/787.8e580187.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b1fa3726.css",
+    "static/js/main.450fd64a.js"
+  ]
+}
