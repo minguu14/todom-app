@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent } from "react";
 import "./Form.css";
 import { ListData } from "../../model/listData";
 import storage from "../../utils/storage";
+import { useAppSelector } from "../../hooks/redux";
 
 type FormProps = {
   todoValue: string;
@@ -19,8 +20,10 @@ const Form: React.FC<FormProps> = ({
   setListsData,
 }) => {
 
+  const todoLists = useAppSelector((state) => state.list.listsData)
+
   const completedTodoRemove = () => {
-    const completedTodo = listsData.filter(list => list.isChecked !== true);
+    const completedTodo = todoLists.filter(list => list.isChecked !== true);
     setListsData(completedTodo);
     storage.set("listsData", completedTodo);
   } 
