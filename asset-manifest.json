@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/todom-app/static/css/main.16707dde.css",
-    "main.js": "/todom-app/static/js/main.450fd64a.js",
+    "main.css": "/todom-app/static/css/main.be46c03b.css",
+    "main.js": "/todom-app/static/js/main.c9c9e4bd.js",
     "static/js/787.8e580187.chunk.js": "/todom-app/static/js/787.8e580187.chunk.js",
+    "static/media/mangu.png": "/todom-app/static/media/mangu.10ca79e88763d85cb4fc.png",
     "index.html": "/todom-app/index.html",
-    "main.16707dde.css.map": "/todom-app/static/css/main.16707dde.css.map",
-    "main.450fd64a.js.map": "/todom-app/static/js/main.450fd64a.js.map",
+    "main.be46c03b.css.map": "/todom-app/static/css/main.be46c03b.css.map",
+    "main.c9c9e4bd.js.map": "/todom-app/static/js/main.c9c9e4bd.js.map",
     "787.8e580187.chunk.js.map": "/todom-app/static/js/787.8e580187.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.16707dde.css",
-    "static/js/main.450fd64a.js"
+    "static/css/main.be46c03b.css",
+    "static/js/main.c9c9e4bd.js"
   ]
 }
