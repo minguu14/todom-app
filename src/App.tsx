@@ -60,6 +60,8 @@ function App() {
             todoValue={todoValue}
             handlerChange={handleChange}
             handleSubmit={handleSubmit}
+            listsData={listsData}
+            setListsData={setListsData}
           />
         </div>
     </>

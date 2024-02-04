@@ -1,17 +1,29 @@
 import { ChangeEvent, FormEvent } from "react";
 import "./Form.css";
+import { ListData } from "../../model/listData";
+import storage from "../../utils/storage";
 
 type FormProps = {
   todoValue: string;
   handlerChange(e: ChangeEvent<HTMLInputElement>): void;
   handleSubmit(e: FormEvent<HTMLFormElement>): void;
+  listsData: ListData;
+  setListsData: React.Dispatch<React.SetStateAction<ListData>>;
 };
 
 const Form: React.FC<FormProps> = ({
   todoValue,
   handlerChange,
   handleSubmit,
+  listsData,
+  setListsData,
 }) => {
+
+  const completedTodoRemove = () => {
+    const completedTodo = listsData.filter(list => list.isChecked !== true);
+    setListsData(completedTodo);
+    storage.set("listsData", completedTodo);
+  } 
 
   return (
     <form onSubmit={handleSubmit} className="form_container">
@@ -25,6 +37,7 @@ const Form: React.FC<FormProps> = ({
         onChange={handlerChange}
       />
       <input type="submit" value="작성" className="btn" />
+      <button className="btn completedTodoRemove" onClick={completedTodoRemove}>완료된 목록 지우기</button>
     </form>
   );
 };
