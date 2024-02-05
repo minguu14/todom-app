@@ -1,32 +1,38 @@
-import { ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import "./Form.css";
-import { ListData } from "../../model/listData";
-import storage from "../../utils/storage";
-import { useAppSelector } from "../../hooks/redux";
+import { useAppDispatch } from "../../hooks/redux";
+import uuid from "react-uuid";
+import { addTodoLists, completedTodoRemove } from "../../store/listsSlice/listsSlice";
 
-type FormProps = {
-  todoValue: string;
-  handlerChange(e: ChangeEvent<HTMLInputElement>): void;
-  handleSubmit(e: FormEvent<HTMLFormElement>): void;
-  listsData: ListData;
-  setListsData: React.Dispatch<React.SetStateAction<ListData>>;
-};
 
-const Form: React.FC<FormProps> = ({
-  todoValue,
-  handlerChange,
-  handleSubmit,
-  listsData,
-  setListsData,
-}) => {
+const Form: React.FC = () => {
+  
+  const [todoValue, setTodoValue] = useState("");
 
-  const todoLists = useAppSelector((state) => state.list.listsData)
+  const dispatch = useAppDispatch();
 
-  const completedTodoRemove = () => {
-    const completedTodo = todoLists.filter(list => list.isChecked !== true);
-    setListsData(completedTodo);
-    storage.set("listsData", completedTodo);
-  } 
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setTodoValue(e.target.value);
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    if (!todoValue) {
+      e.preventDefault();
+      return;
+    }
+
+    e.preventDefault();
+
+    const todoData = {
+      id: uuid(),
+      title: todoValue,
+      isChecked: false,
+      isEdit: false,
+    };
+
+    dispatch(addTodoLists(todoData));
+    setTodoValue("");
+  };
 
   return (
     <form onSubmit={handleSubmit} className="form_container">
@@ -37,10 +43,10 @@ const Form: React.FC<FormProps> = ({
         name="todo"
         value={todoValue}
         placeholder="맹~하지 말고 할 거 입력해주세요."
-        onChange={handlerChange}
+        onChange={handleChange}
       />
       <input type="submit" value="작성" className="btn" />
-      <button className="btn completedTodoRemove" onClick={completedTodoRemove}>완료된 목록 지우기</button>
+      <button className="btn completedTodoRemove" onClick={()=>dispatch(completedTodoRemove())}>완료된 목록 지우기</button>
     </form>
   );
 };
