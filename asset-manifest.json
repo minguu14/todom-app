@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/todom-app/static/css/main.be46c03b.css",
-    "main.js": "/todom-app/static/js/main.c9c9e4bd.js",
+    "main.css": "/todom-app/static/css/main.f1e16711.css",
+    "main.js": "/todom-app/static/js/main.9e2aa9fb.js",
     "static/js/787.8e580187.chunk.js": "/todom-app/static/js/787.8e580187.chunk.js",
     "static/media/mangu.png": "/todom-app/static/media/mangu.10ca79e88763d85cb4fc.png",
     "index.html": "/todom-app/index.html",
-    "main.be46c03b.css.map": "/todom-app/static/css/main.be46c03b.css.map",
-    "main.c9c9e4bd.js.map": "/todom-app/static/js/main.c9c9e4bd.js.map",
+    "main.f1e16711.css.map": "/todom-app/static/css/main.f1e16711.css.map",
+    "main.9e2aa9fb.js.map": "/todom-app/static/js/main.9e2aa9fb.js.map",
     "787.8e580187.chunk.js.map": "/todom-app/static/js/787.8e580187.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.be46c03b.css",
-    "static/js/main.c9c9e4bd.js"
+    "static/css/main.f1e16711.css",
+    "static/js/main.9e2aa9fb.js"
   ]
 }
