@@ -1,4 +1,3 @@
-import "./Lists.css";
 import { useAppSelector } from "../../hooks/redux";
 import List from "../List/List";
 
